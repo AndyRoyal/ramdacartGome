@@ -1,0 +1,55 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {{ mcart.normalHead(config,"加入购物车成功_国美")}}
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/default/style.html'-->">
+    <!--gfe:combo:end-->
+    
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="/css/addsuccess.css">
+    <!--gfe:combo:end-->
+</head>
+<body>
+    <!--#include virtual="/n/common/default/head.html"-->
+    <div class="item-info">
+        <div class="body" id="item-info-body">
+            
+        </div>
+    </div>
+    <div class="box1">
+    </div>
+     <div class="box2">
+    </div>
+    <!--#include virtual="/n/common/default/foot.html"--> 
+    <script type="text/javascript">
+    var $page={
+        name:"addsucess",
+        referer:"{{referer}}"
+    }
+    </script>
+    <!--#include virtual="/n/common/global/global.html"-->
+
+    <!--gfe:combo:begin-->
+    <script src="<!--#include virtual='/n/common/default/script.html'-->"></script>
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+    <script src="/js/templatefn/addsuccess2.js"></script>
+    <script src="/js/js/common/panel.js"></script>
+    <script src="/js/js/cart/addsuccess2.js"></script>
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+</body>
+</html>

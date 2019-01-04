@@ -1,0 +1,36 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ mcart.normalHead(config,"我的国美 -修改订单")}}
+  <link rel="stylesheet" href="gmlib/reset/1.1.0/reset.css">
+  <link rel="stylesheet" href="/css/i/sprite.css">
+  <link rel="stylesheet" href="/css/orderModify.css">
+</head> 
+<body>
+<div class="popupMain">
+    <div class="titleBox clearfix">
+        <h2>修改订单</h2>
+        <a class="j-close" href="javascript:;"></a>
+    </div>
+    <div class="contMain" id="orderModifyMain">
+      <div class="loading animated zoomIn"></div>
+    </div>
+</div>
+<script>
+   window.$config={
+      instenceAtom:{
+         "invoice":''
+      }
+   }
+</script>
+<!--#include virtual="/n/common/global/global.html"-->
+<script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+
+<script src="/js/js/common/kit/util.js"></script>
+<script src="/js/js/common/kit/request/request.js"></script>
+<script src="/js/templatefn/orderModify.js"></script>
+<script src="/js/js/common/validate.js"></script>
+<script src="/js/js/orderModify/orderModify.js"></script>
+</body>
+</html>

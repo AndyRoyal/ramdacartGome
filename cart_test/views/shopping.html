@@ -1,0 +1,114 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    {{ mcart.normalHead(config,"订单信息_国美")}}
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="gmlib/unit/gstore/1.0.0/gstore.css">
+    <link rel="stylesheet" href="/css/shopping.css">
+    <!--gfe:combo:end-->
+
+</head>
+<body class="w990">
+    <!--#include virtual="/n/common/a11/head.html"-->
+	<!--收获人信息-->
+	<div class="container receiver-info clearfix" id="address">
+      <div class="loading animated zoomIn"></div>
+    </div>
+    {% if site=="gomeVirtualCard" %}	
+    <div class="container entity-cart" id="entityCard">
+    </div>
+    {% endif %} 
+    {% if site=="haiwaigou" %}
+    <!--海外购授权-->
+    <div class="container identity clearfix" id="hwg-auth">
+      <div class="loading animated zoomIn"></div>
+    </div> 
+    {% endif %} 
+    <!--支付方式-->
+    <div class="container payment" id="payment">
+    	<div class="loading animated zoomIn"></div>
+    </div>	
+    <!--送货清单-->
+    <div class="container listOfItem" id="listOfItem">
+    	 <div class="loading animated zoomIn"></div>
+    </div>
+    <!--送货清单-->
+    <!-- 发票信息 -->
+    <div class="container" id="invoice">
+    	 <div class="loading animated zoomIn"></div>
+    </div>
+    <!--优惠-->
+	<div class="container coupon-chooes" id="preferential">
+    	 <div class="loading animated zoomIn"></div>
+    </div>
+    <!--提交订单-->
+    <div class="container commitOrder" id="commitOrder">
+    	 <div class="loading animated zoomIn"></div>
+    </div>
+    
+    <!--#include virtual="/n/common/a11/foot.html"-->
+    <!--#include virtual="/n/common/a11/aside.html"-->
+    <script>
+    var $page={
+        site:"{{ site }}"
+        ,name:"shopping"
+    }
+    </script>
+    <!--#include virtual="/n/common/global/global.html"-->
+    <!--gfe:combo:begin-->
+    <script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+    <script src="/js/js/common/meiDian.js"></script>
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <script src="/js/templatefn/shopping.js"></script>
+    <script src="/js/js/common/gscroll.js"></script>
+    <script src="/js/js/common/panel.js"></script>
+    <script src="/js/js/common/validate.js"></script>
+    <script src="/js/js/common/gcity.js"></script>
+    <script src="/js/js/common/gstore.js"></script>
+    <script src="/js/js/shopping/entityCard.js"></script>
+    <script src="/js/js/shopping/authorization.js"></script>
+    <script src="/js/js/shopping/address.js"></script>
+    <script src="/js/js/shopping/payment.js"></script>
+    <script src="/js/js/shopping/listOfItemMethod.js"></script>
+    <script src="/js/js/shopping/listOfItemItems.js"></script>
+    <script src="/js/js/shopping/listOfItem.js"></script>
+    <script src="/js/js/yytong/md5.min.js"></script>
+    <script src="/js/js/yytong/crypto-js.js"></script>
+    <script src="/js/js/yytong/PassGuardCtrl.js"></script>
+    <script src="/js/js/yytong/thickbox.js"></script>
+    <script src="/js/js/shopping/preferential.js"></script>
+    <script src="/js/js/shopping/commitOrder.js"></script>
+    <script src="/js/js/shopping/invoice.js"></script>
+    <script src="/js/js/shopping/interceptor.js"></script>
+    <script src="/js/js/shopping/shopping.js"></script>
+    
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="/js/js/common/placeholders.js"></script>    
+    <![endif]-->
+
+</body>
+</html>

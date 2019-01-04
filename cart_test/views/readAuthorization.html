@@ -1,0 +1,93 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{{ mcart.normalHead(config,"海外购身份授权_国美")}}
+    <!--gfe:combo:begin-->
+	<link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+	<!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="/css/overseas.css">
+    <!--gfe:combo:end-->
+
+</head>
+<body class="w990">
+<!--#include virtual="/n/common/a11/head.html"-->
+<div class="overseas_license">
+	<div class="mb20 authorize_title">为了能够给您提供更加优质的服务，<span>国美海外购</span>希望能得到您的授权！</div>
+	<div class="authorize_part1 clearfix">
+		<img width="112" height="43" class="fl" src="//js.gomein.net.cn/f2eimage/myaccount/haiwaigou-logo.jpg">
+		<div class="img_arrow fl"><span>提供授权信息</span><span class="mt10">提供增值服务</span></div>
+		<img width="190" height="43" class=" fl" style="  margin-left: -27px;" alt="国美在线" src="{{ config.imageServer }}/images/ui/gomelogo_200x43.png">
+	</div>
+	<div class="authorize_part2 clearfix">
+		<ul>
+			<li>您授权后，此应用可以：</li>
+			<li><b></b>读取您的用户名等基本信息</li>
+			<li><b></b>为您创建新的交易订单</li>
+		</ul>
+	</div>
+	<div class="authorize_part3">
+		<label for="1"><input type="checkbox" class="inputcheck" id="readCheck">我已经阅读并同意<a class="blue" href="//www.gome.com.cn/haiwaigouRead/index.html" target="_blank">国美海外购授权须知</a></label><br>
+		<div class="mt10">
+			<a class="btn btn-disabled btn-w83" href="javascript:void(0)" style="margin-right: 20px;" id="mainBtn"> 确定</a>
+			<a class="btn btn-default btn-w83" href="/" > 取消 </a>
+		</div>
+		<span style="position: absolute;left: 220px;bottom: -2px;color: #c00;display:none;" id="error">您好，授权后才能继续购物哦！</span>
+	</div>
+</div>
+<!--#include virtual="/n/common/a11/foot.html"-->
+<!--#include virtual="/n/common/a11/aside.html"-->
+<script>
+	window.$page={
+		name:"haiwaigou_sq"
+	}
+</script>
+<!--#include virtual="/n/common/global/global.html"-->
+<!--gfe:combo:begin-->
+<script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+<!--gfe:combo:end-->
+
+<!--gfe:combo:begin-->
+<script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+<script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+<script src="/js/js/common/kit/request/request.js"></script>
+<script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+<script src="/js/js/common/$config.js"></script>
+<script src="/js/js/common/kit/util.js"></script>
+<script src="/js/js/common/cart-ui.js"></script>
+<!--gfe:combo:end-->
+
+<script type="text/javascript" inbottom>
+	$("#readCheck").on("click",function(){
+		if($(this).attr("checked")){
+			$("#mainBtn")
+			.removeClass("btn-disabled")
+			.addClass("btn-primary");
+		}else{
+			$("#mainBtn")
+			.removeClass("btn-primary")
+			.addClass("btn-disabled");
+		}
+	});
+	$("#mainBtn").on("click",function(){
+		if($(this).is(".btn-disabled"))return;
+		$.ajax({
+			type:"post",
+			url:"/home/api/haiwaigou/authorizeHaiwaigouUser",
+			datatype:"json",
+			data:{}
+		}).then(function(data){
+			if(data.success) window.location.href="/haiwaigou/shopping";
+			else alert(data.errMsg);
+		});
+	});
+</script>
+
+</body>
+</html>

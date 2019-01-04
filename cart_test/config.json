@@ -1,0 +1,17 @@
+{
+    "packageDir": "build",
+    "projectPath": "gmpro/2.0.0/cart/2.3.9",
+    "projectFolder": "css|js",
+    "appPath": "views",
+    "appFolder": "views",
+    "appAppend": "node_modules|router|static|util|app.js|app-pm2.json|package.json",
+    "htmlDir": "views",
+    "buildDirName": "views",
+    "output":{
+        "excludeFiles":"(js/html)|(js/template)$",
+        "debug":true,
+        "debugCdn":"//www.cartnode.com",
+        "cssCombo": true,
+        "jsCombo": true
+    }
+}
