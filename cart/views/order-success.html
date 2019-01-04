@@ -1,0 +1,76 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    {{ mcart.normalHead(config,"订单提交成功_国美")}}
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="/css/order-success.css">
+    <!--gfe:combo:end-->
+
+</head>
+<body class="w990">
+    <!--#include virtual="/n/common/a11/head.html"-->
+    <div class="oc_Warp">
+        <div class="oc_orderType" id="oc_orderType">
+        </div>
+        
+        <div id="oc_orderInfo">
+        </div>
+
+        <div class="oc_hrefs">
+            <a href="javascript:void(0)" class="oc_btn" id="gotoOrderDetail">查看详情</a><a href="//www{{ config.cookieDomain }}/" class="oc_btn">继续购物</a>
+        </div>
+
+        <dl class="oc_electricApplianceService">
+            <dt>您购买的家电支持如下服务：</dt>
+            <dd>上门安装服务：此商品由国美提供上门安装服务。<a href="//help.gome.com.cn/question/25.html" class="oc_blue" target="_blank">查看详情</a></dd>
+            <dd>旧机回收抵现：可通过微信、客服或账号登录填写信息预约回收服务。 <a href="//help.gome.com.cn/html/shfw/jdhs.html" class="oc_blue" target="_blank">查看详情</a></dd>
+        </dl>
+
+        <dl class="oc_rebateInfos" id="oc_rebateInfos">
+        </dl>
+
+        <p class="oc_waring oc_gray_a5">
+            <b>重要提醒：</b>谨防网络及客服诈骗！国美不会以订单异常、系统维护等情况为由，要求您进行退款操作。详情请点击“<a href="//help.gome.com.cn/article/315-0-0.html" class="oc_blue" target="_blank"><b>退款说明</b></a>”
+            “<a href="//news.gome.com.cn/20001545.html" class="oc_blue" target="_blank"><b>防诈骗说明</b></a>”
+        </p>
+    </div>
+    <!--#include virtual="/n/common/a11/foot.html"-->
+    <!--#include virtual="/n/common/a11/aside.html"-->
+    <script type="text/javascript">
+        var $page={
+            name:"order-success"
+        }
+    </script>
+    <!--#include virtual="/n/common/global/global.html"-->
+    <!--gfe:combo:begin-->
+    <script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+
+    <script src="/js/templatefn/order-success.js"></script>
+    <script src="/js/js/order-success/order-success.js"></script>
+    <script src="/js/js/common/panel.js"></script>
+    <script src="gmlib/unit/gtime/1.0.0/gtime.min.js"></script>
+    
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+
+</body>
+</html>

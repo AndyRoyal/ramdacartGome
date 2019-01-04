@@ -1,0 +1,233 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{{ mcart.normalHead(config,"我的购物车_国美")}}
+	<!--gfe:combo:begin-->
+	<link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+	<!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="gmlib/ui/gcount/1.0.0/gcount.css">
+    <link rel="stylesheet" href="gmlib/ui/gselect/1.0.0/gselect.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <!--gfe:combo:end-->
+</head>
+<body class="w990">
+	<!--#include virtual="/n/common/a11/head.html"-->
+	<div class=" container">
+        <!--是否展示降价通知-->
+        <div class="showDownNotice hide" showDownNotice><i class="i-attention c-i notice_orange" i-attention></i>购物车有<span class="num"></span>件商品已降价，快去看看吧！<i class="i-close c-i closebtn-new" i-close></i></div>
+		<div class="fl " act-login-info>
+			<span class="cart-main-notice">
+				<i class="c-i notice_gray noticeicon"></i>
+			部分商品的价格和库存可能因收货地址不同而变化，请以订单提交时的信息为准。
+			</span>
+
+			<div class="js-head-tabs" style="overflow: hidden;display: none">
+				<div class="cart-head-title" >
+					<a href="javascript:" class="fl head-tab js-base" act-head-tab="">普通商品</a>
+					<div class="head-title-box js-head-num-home" style="display: none">
+						<span class="head-title-tip" >0</span>
+						<span class="head-title-corner"></span>
+					</div>
+				</div>
+				<div class="cart-head-title">
+					<a href="javascript:" class="fl head-tab js-qyg" act-head-tab="qyg" style="width:100px ">企业采购商品</a>
+					<div class="head-title-box js-head-num-qyg" style="display: none">
+						<span class="head-title-tip" >0</span>
+						<span class="head-title-corner"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cart-login-tip fl hide" id="idnotlogin" act-not-login-info>
+			您还没有登录！登录后购物车的商品将保存到您账号中。
+			<a  act-user-login  class="cart-login-btn"  href="javascript:">
+				立即登录
+			</a>
+		</div>
+		<div class="fr cart-area hide" click-document-pre>
+			配送至：
+			<div class="prdRight city cityShow" id="gCityRegion">
+				<span id="address" class="regon">
+					<a id="stockaddress" href="javascript:;" show-label></a>
+				</span>
+				<div class="gCity clearfix" style="display:none;" click-document-hide></div>
+			</div>
+		</div>
+	</div>
+	<div class="cart-lists" >
+		<div class="container cart-loading"></div>
+	</div>
+	<div class="container cart-deleted" act-deleted-wrap>
+		<div class="cart-deleted-header">
+			已删除商品，您可以重新购买或移入收藏夹：
+		</div>
+		<div class="cart-deleted-content" act-deleted-list>
+		</div>
+	</div>
+
+		<div class="container cart-bottom-tab js-bottom-tabs"
+			 {% if  site ==='qiyegou' %}
+			  style="display: none"
+			 {% endif %}>
+		<div class="cart-tab-header clearfix">
+			<a href="javascript:;">为您推荐</a>
+			<a href="javascript:;">最近浏览</a>
+			<a href="javascript:;">我的收藏</a>
+		</div>
+		<div class="tab-content-wrap">
+			<div class="cart-tab-content">
+				<div class="scroll-container" data-recommend>
+					<div class="c-i arrow-left scroll-left-btn" prev-btn></div>
+					<div class="c-i arrow-right scroll-right-btn" next-btn></div>
+					<div class="scroll-view clearfix" cart-scroll-view>
+						<ul>
+						<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="cart-tab-content">
+				<div class="scroll-container" data-history>
+					<div class="c-i arrow-left scroll-left-btn" prev-btn></div>
+					<div class="c-i arrow-right scroll-right-btn" next-btn></div>
+					<div class="scroll-view clearfix" cart-scroll-view>
+						<ul>
+						<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="cart-tab-content">
+
+				<div class="scroll-container" data-favorites>
+					<div class="c-i arrow-left scroll-left-btn" prev-btn></div>
+					<div class="c-i arrow-right scroll-right-btn" next-btn></div>
+					<div class="scroll-view clearfix" cart-scroll-view>
+						<ul>
+						<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="tpl/text" id="arrival-notice">
+		<div class="dialogBox TZ prevPopBox ifixed">
+		    <div class="close">
+		        <a class="js-layerclose" href="javascript:;" act-close>╳</a>
+		    </div>
+		    <div>
+		        <ul class="dialogTZ">
+		            <li class="cart-arrival-notice-title">
+		            	<span>到货通知</span>商品到货后，我们会通过手机短信或邮件通知您
+		            </li>
+		            <li class="inp">
+		                <em class="pdtl-red">*</em>&nbsp;手机号码：
+		                <input type="text" name="phoneno" maxlength="11" id="tell" /><span id="errorTell"></span>
+		            </li>
+		            <li class="inp">
+		                <em class="pdtl-red">&nbsp;&nbsp;</em>&nbsp;邮箱地址：
+		                <input type="text" maxlength="50" id="mail"  name="email" />
+		                <span id="errorMail"></span>
+		            </li>
+		            <li class="add">
+		                <input type="checkbox" id="chk" />
+		                <label for="chk">
+		                    同时移入收藏夹
+		                </label>
+		            </li>
+		            <li class="smt">
+		                <a class="redlink" href="javascript:;" act-submit>
+		                    确定
+		                </a>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+	</script>
+	<script type="text/tpl" id="couponTpl">
+		<div class="cart-box-item clearfix">
+			<div class="cart-coupon-icon">
+				<div class="cart-coupon-icon-inner">
+					￥${faceValue}
+				</div>
+			</div>
+			<div class="cart-coupon-text">
+				<div class="cart-coupon-title">
+					${description}
+				</div>
+				<div class="cart-coupon-dsp">
+					${startDate}-${expirationDate}
+				</div>
+			</div>
+			<a
+				class="cart-coupon-btn"
+				act-add-coupon
+				data-cpid="${couponNo}"
+				data-aid="${id}"
+				data-quantity="${quantity}"
+				>
+				领取
+			</a>
+		</div>
+	</script>
+	<!--#include virtual="/n/common/a11/foot.html"-->
+	<!--#include virtual="/n/common/a11/aside.html"-->
+	<script>
+	var $page={
+        site:"{{ site }}"
+        ,name:"cart"
+    }
+	</script>
+	<!--#include virtual="/n/common/global/global.html"-->
+
+	<!--gfe:combo:begin-->
+	<script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+	<!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+    <!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+	<script src="gmlib/ui/gcheckbox/1.0.0/gCheckbox.js"></script>
+	<script src="gmlib/ui/gpopup/1.0.0/gpopup.js"></script>
+	<script src="gmlib/ui/gcount/1.0.0/gcount.js"></script>
+	<script src="gmlib/ui/gselect/1.0.0/gselect.js"></script>
+	<script src="gmlib/unit/g/1.0.0/g.min.js"></script>
+    <script src="/js/templatefn/cart.js"></script>
+    <script src="/js/js/common/gscroll.js"></script>
+	<script src="/js/js/common/gcity.js"></script>
+    <script src="/js/js/common/panel.js"></script>
+	<script src="/js/js/common/meiDian.js"></script>
+    <script src="/js/js/cart/cart2.js"></script>
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        function getParam(param) {
+            var result = {};
+
+            if (location.search.indexOf("?") != -1) {
+
+                var str = location.search.substr(1);
+
+                strs = str.split("&");
+
+                for (var i = 0; i < strs.length; i++) {
+
+                    if (strs[i].split('=').length !== 2) {//过滤不规则url
+                        continue;
+                    }
+                    result[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            if (result[param] == undefined) {
+                result[param] = "";
+            }
+            return result[param];
+        }
+
+    </script>
+
+    <script>
+    
+        var option_callback = getParam('option_callback');
+        
+        option_callback = parseInt(option_callback);
+        //console.log("option_callback:" + option_callback)
+
+        //以下值 只能添加 不能删除 
+        switch (option_callback) {
+            case 0:
+                window.top.g.login.callback();
+                break;
+            case 1://登录成功
+                window.top.g.login.callback(true);
+                break;
+            case 2://校验用户
+                window.top.g.login.verifyUser();
+                break;
+            case 3://弹出登录框
+                window.top.g.login.login_open(getParam("userName"));
+                break;
+            case 4://弹出注册
+                window.top.g.login.reg_open();
+                break;
+
+            case 10://嵌入登录层 回调
+                window.top.g.embedLogin.callback(true);
+                break;
+            case 11://嵌入登录层 登录
+                window.top.g.embedLogin.start_login();
+                break;
+            case 12://嵌入登录层 注册
+                window.top.g.embedLogin.start_reg();
+                break;
+            default:
+                window.top.g.login.callback();
+                break;
+        }       
+    </script>
+</body>
+</html>

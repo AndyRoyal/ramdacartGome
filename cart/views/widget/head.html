@@ -1,0 +1,46 @@
+{% if config.debug %}
+
+<div class="gome-top">
+    <div id="gome-top-body" class="wbox">
+        <ul>
+            <li id="gome-user" data-load="user">
+                <b id="loginDiv-name"><a data-code="public01053" href="http://v.atguat.com.cn" target="_blank">国美会员</a><i></i></b>
+                <div class="public-dropdown"></div>
+            </li>
+            <li id="loginDiv-link" class="gome-link">
+                <a data-code="public01002" href="//login.atguat.com.cn/login">登录</a><a data-code="public01003" href="//reg.atguat.com.cn/register/index/person">注册</a>
+            </li>
+        </ul>
+        <ul id="gome-top-right">
+            <li class="gome-link"><a data-code="public01004" href="http://myhome.atguat.com.cn/member/myOrder?flag=a0">我的订单</a></li>
+            <li id="gome-mygome" data-load="mygome">
+                <b><a data-code="public01050" href="http://myhome.atguat.com.cn/member/profileHome?flag=a" target="_blank">我的国美</a><i></i></b>
+                <div class="public-dropdown"></div>
+            </li>
+            <li class="gome-spacer"></li>
+            <li id="gome-service" class="drop" data-load="service">
+                <b><em class="gm-icon">&#x0066;</em><a data-code="public01052" href="http://help.gome.com.cn/" target="_blank">服务中心</a><i></i></b>
+                <div class="public-dropdown"></div>
+            </li>
+            <li id="gome-sitemap" class="drop" data-type="a11" data-load="sitemap">
+                <b>网站导航<i></i></b>
+                <div class="public-dropdown"></div>
+            </li>
+            <li class="gome-spacer"></li>
+            <li id="gome-phone" class="drop">
+                <b><em class="gm-icon">&#x00E1;</em><a data-code="public01049" href="http://shouji.gome.com.cn/" target="_blank">手机国美</a><i></i></b>
+                <div class="public-dropdown"><a data-code="public01005" href="http://shouji.gome.com.cn/" target="_blank"></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--gome_top-->
+<div id="gome-head" class="wbox">
+    <div id="logo"><a data-code="public03001" href="//www.atguat.com.cn/">国美在线</a></div>
+    <div id="head-title"></div>
+    <div id="head-box"></div>
+</div>
+{% else %}
+<!--#include virtual="/n/common/a11/head.html"-->
+{% endif %}
+

@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" 
+		href="/??/gmlib/reset/1.1.0/reset.css,gmpro/1.0.0/cart/1.0.0/css/common.css,gmlib/ui/gcount/1.0.0/gcount.css,gmlib/ui/gselect/1.0.0/gselect.css,gmpro/1.0.0/cart/1.0.0/css/i/sprite.css" />
+	<link rel="stylesheet" href="/gmpro/1.0.0/cart/1.0.0/css/cart.css">
+	<link rel="stylesheet" href="http://css.gomein.net.cn/css/n/detail/gCity.min.css">
+	<link rel="stylesheet" href="/gmpro/1.0.0/cart/1.0.0/css/i/sprite.css">
+</head>
+<body>
+	<div class="container cart-logo">
+		<a href="/">
+			<img src="${imageServer}/images/ui/gomelogo.png" alt="国美在线"> 购物车
+		</a> 
+	</div>
+<!-- 	<div class="container cart-login-tip">
+		您还没有登录！登录后购物车的商品将保存到您账号中。 
+		<a class="cart-login-btn" href="http://login{{ config.cookieDomain }}/login">
+			立即登录
+		</a> 
+	</div>
+ -->
+	<div class="container">  
+		<div class="cart-login-tip fl">
+			您还没有登录！登录后购物车的商品将保存到您账号中。 
+			<a class="cart-login-btn" href="http://login{{ config.cookieDomain }}/login">
+				立即登录
+			</a> 
+		</div> 
+		<div class="clearfix cart-main-notice" act-login-info>
+			<i class="c-i notice_gray"></i>
+			部分商品的价格和库存可能因收货地址不同而变化，请以订单提交时的信息为准。
+		</div>
+		<div class="fr cart-area">
+			配送至：
+			<div class="prdRight city">
+				<span id="address" class="regon">
+				<a id="stockaddress" href="javascript:;"></a>
+				</span>
+				<div class="gCity clearfix"></div>
+			</div>
+		</div> 
+		<!-- <div class="clearfix">
+			<div class="fl">
+				<i class="c-i notice_gray"></i>
+				部分商品的价格和库存可能因收货地址不同而变化，请以订单提交时的信息为准。
+			</div>
+			<div class="fr cart-area">
+				配送至：
+				<div class="prdRight city">
+					<span id="address" class="regon">
+					<a id="stockaddress" href="javascript:;"></a>
+					</span>
+					<div class="gCity clearfix"></div>
+				</div>
+			</div>
+		</div> -->
+		
+	</div>
+
+
+	<!-- 延保购物车 -->
+	<div class="container cart-ext">
+
+		<div class="cart-main-header clearfix"> 
+			<div class="cart-col-1"> 
+				可购延保服务的商品
+			</div>
+			<div class="cart-col-2">
+				选择延保服务
+			</div>
+			<div class="cart-col-3">
+				数量
+			</div> 
+		</div>
+
+		<div class="cart-shop-header">
+			<div class="cart-col-1">
+				您可以对订单8423699222的以下商品选购延保服务
+			</div> 
+			<div class="cart-col-2">
+				0件商品  
+				&nbsp;&nbsp;
+				小计：¥0.00
+			</div>
+		</div>
+		<div class="cart-shop-goods">  
+			<div class="cart-shop-good cart-shop-good-common clearfix"> 
+				<div class="cart-col-1">
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div>  
+				</div>
+				<div class="cart-col-4">  
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item cart-ext-item-selected" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+				</div> 
+				<div class="cart-col-5"> 
+					1
+				</div> 
+			</div>
+
+			<div class="cart-shop-good clearfix"> 
+				<div class="cart-col-1">
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div>  
+				</div>
+				<div class="cart-col-4">  
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item cart-ext-item-selected" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+				</div> 
+				<div class="cart-col-5"> 
+					1
+				</div> 
+			</div> 
+			
+		</div> 
+
+		<div class="cart-shop-header">
+			<div class="cart-col-1">
+				您可以对订单8423699222的以下商品选购延保服务
+			</div> 
+			<div class="cart-col-2">
+				0件商品  
+				&nbsp;&nbsp;
+				小计：¥0.00
+			</div>
+		</div>
+		<div class="cart-shop-goods">  
+			<div class="cart-shop-good cart-shop-good-common clearfix"> 
+				<div class="cart-col-1">
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div>  
+				</div>
+				<div class="cart-col-4">  
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item cart-ext-item-selected" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+				</div> 
+				<div class="cart-col-5"> 
+					1
+				</div> 
+			</div>
+
+			<div class="cart-shop-good clearfix"> 
+				<div class="cart-col-1">
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div>  
+				</div>
+				<div class="cart-col-4">  
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item cart-ext-item-selected" href="javascript:;">
+						<i class="c-i extend cart-ext-icon"></i>
+						特惠延长保修3年 210元
+						<i class="c-i ext-selected"></i>
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+					<a class="cart-ext-item" href="javascript:;">
+						<i class="c-i cu cart-ext-icon"></i>
+						特惠延长保修3年 210元
+					</a> 
+				</div> 
+				<div class="cart-col-5"> 
+					1
+				</div> 
+			</div> 
+			
+		</div> 
+
+	</div>
+	<!-- /延保购物车 -->
+
+
+	<div class="container">
+		<div style="display: none;">
+			<img src="http://img.gomein.net.cn/gmlib/ui/loading/1.0.0/loading.gif" alt="">
+		</div>
+		<div class="cart-main-notice clearfix">
+			<div class="fl">
+				<i class="c-i notice_gray"></i>
+				部分商品的价格和库存可能因收货地址不同而变化，请以订单提交时的信息为准。
+			</div>
+			<div class="fr cart-area">
+				配送至：
+				<div class="prdRight city">
+					<span id="address" class="regon">
+					<a id="stockaddress" href="javascript:;"></a>
+					</span>
+					<div class="gCity clearfix"></div>
+				</div>
+			</div>
+		</div>  
+		<div class="cart-main-header clearfix"> 
+			<div class="cart-col-1"> 
+				<div 
+					gui-checkbox 
+					gui-class-unchecked="checkboxs" 
+					gui-class-checked="checkbox_chose" 
+					gui-class-disabled="disabled"
+					class="c-i checkboxs">
+						<input type="checkbox">
+				</div>
+			</div>
+			<div class="cart-col-2">
+				全选
+			</div>
+			<div class="cart-col-3">
+				商品信息
+			</div>
+			<div class="cart-col-4">
+				单价（元）
+			</div>
+			<div class="cart-col-5">
+				数量
+			</div>
+			<div class="cart-col-6">
+				金额（元）
+			</div>
+			<div class="cart-col-7">
+				操作
+			</div>
+		</div>
+		<div class="cart-shop-header">
+			<div class="cart-col-1">
+				<div 
+					gui-checkbox 
+					gui-class-unchecked="checkboxs" 
+					gui-class-checked="checkbox_chose" 
+					gui-class-disabled="disabled"
+					class="c-i checkboxs">
+						<input type="checkbox">
+				</div>
+			</div>
+			<div class="cart-col-2">
+				国美自营
+				<div class="cart-coupon" gui-popup gui-popup-animate="1">
+					<a href="javascript:;" class="cart-coupon-trigger">
+						<i class="c-i add"></i>
+						优惠券
+						<i class="c-i cart-arrow arrowdown_red"></i>
+					</a> 
+					<div class="cart-coupon-box" gui-popupbox>
+						<div class="c-i closebtn" gui-popupclose></div>
+						<div class="cart-box-arrow">
+							<i>◆</i><i class="cart-arrow-cover">◆</i>
+						</div>
+						<div class="cart-box-border" gui-popupbox-animate>
+							<div class="cart-coupon-notice">
+								<i class="c-i notice_red"></i>
+								领取成功的优惠券可在订单提交页使用
+							</div>
+							<div class="cart-coupon-items">
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div>
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div> 
+
+							</div> 
+						</div>
+					</div>
+				</div>
+
+
+				<span class="cart-kf" data-customer_service_id="3"><i></i>联系客服</span>
+				<!-- <span data-customer_service_id="80010178">带ID的客服</span> -->
+			</div>
+			<div class="cart-col-3">
+				
+				  
+			</div>
+			<div class="cart-col-4">
+				 &nbsp;
+			</div>
+			<div class="cart-col-5">
+				 &nbsp;
+			</div>
+			<div class="cart-col-6">
+				小计：￥0.00
+			</div>
+			<div class="cart-col-7">
+				 &nbsp;
+			</div>
+		</div>
+
+		<div class="cart-shop-goods cart-shop-goods-promotion">
+
+			<div class="cart-shop-good clearfix"> 
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-presale-wrap">
+					<div class="cart-presale-top clearfix">
+						
+					
+						<div class="cart-col-3">
+							<div class="cart-good-name">
+								<a href="">
+									戴尔液晶显示器什么乱七八糟的
+								</a> 
+							</div> 
+							<div class="cart-good-info"> 
+								<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+									<select name="" id="">
+										<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+										<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+										<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+										<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+									</select>
+								</div>  
+							</div>
+							<div class="cart-good-info2">
+								
+							</div>
+						</div>
+						<div class="cart-col-4">
+							
+							 <s class="cart-good-price">
+							 	799.00
+							 </s>
+							 <div class="cart-good-real-price">
+							 	799.00
+							 </div>
+
+							<div class="cart-coupon cart-prom" gui-popup gui-popup-animate="1"> 
+								<div class="cart-coupon-trigger">
+									促销优惠
+									<i class="c-i cart-arrow arrowdown_red"></i>
+								</div>
+								<div class="cart-coupon-box" gui-popupbox> 
+									<div class="cart-box-arrow">
+										<i>◆</i><i class="cart-arrow-cover">◆</i>
+									</div>
+									<div class="cart-box-border" gui-popupbox-animate> 
+										<div class="cart-coupon-items border-none">
+											<dl class="clearfix">
+												<dt>
+													<input type="radio" name="cart-coupon">
+												</dt>
+												<dd>
+													活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+												</dd>
+											</dl>
+											<dl class="clearfix">
+												<dt>
+													<input type="radio" name="cart-coupon">
+												</dt>
+												<dd>
+													活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+												</dd>
+											</dl>
+											<div class="cart-coupon-btns cart-box-group-a">
+												<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+												<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
+
+						</div>	
+					</div>	
+					<div class="cart-presale-bottom">
+						<div class="cart-presale-box clearfix">
+							<div class="cart-presale-prices">
+								<div class="cart-presale-price cart-presale-prev">
+									已满19人
+									<br>
+									<span>
+										¥899.00
+									</span> 
+								</div>
+								<div class="cart-presale-price cart-presale-active">
+									已满19人
+									<br>
+									<span>
+										¥899.00
+									</span> 
+								</div>
+								<div class="cart-presale-price">
+									已满19人
+									<br>
+									<span>
+										¥899.00
+									</span> 
+								</div>
+							</div> 
+						</div> 
+						<div class="cart-presale-text">
+							当前已有
+							<span class="red">
+								20
+							</span>  
+							人预订，您是第
+							<span class="num">
+								21
+							</span> 
+							位。只需
+							<span class="num">
+								78
+							</span> 
+							人预订，即可达到下一阶段。
+						</div>
+					</div>	
+				</div>
+
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div> 
+			  
+			<div class="cart-shop-good clearfix cart-shop-good-common"> 
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<i class="c-i hwg"></i>
+						<a href=""> 
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info2 clearfix">
+						
+					</div>
+					<div class="cart-good-info3 clearfix">
+						适用税率：10%
+						&nbsp;&nbsp;
+						关税：¥28
+						<div class="c-i help-tip" gui-popup gui-popup-event="mouseover">
+							<div class="help-tip-content" gui-popupbox>
+								<i class="help-tip-arrow"></i>
+								<i class="help-tip-arrow2"></i>
+								关税=商品单价 x 件数 x 商品税率
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup gui-popup-animate="1"> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border" gui-popupbox-animate> 
+								<div class="cart-coupon-items border-none">
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<div class="cart-coupon-btns cart-box-group-a">
+										<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+										<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div> 
+
+
+			<div class="cart-shop-good clearfix"> 
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup gui-popup-animate="1"> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border" gui-popupbox-animate> 
+								<div class="cart-coupon-items border-none">
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<div class="cart-coupon-btns cart-box-group-a">
+										<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+										<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div> 
+		
+
+
+			<div class="cart-shop-info">
+				<div class="cart-icon-notice">
+					满减
+					<b></b>
+					<i></i>
+				</div>
+				单笔订单满1000元立减50元，再购100元即可享受满减。
+				<a href="javascript:;">立即凑单</a>
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-item-line"></div>
+				<div class="clearfix">
+					<div class="cart-col-1"> 
+						<div 
+							gui-checkbox 
+							gui-class-unchecked="checkboxs" 
+							gui-class-checked="checkbox_chose" 
+							gui-class-disabled="disabled"
+							class="c-i checkboxs">
+								<input type="checkbox">
+						</div>
+					</div>
+					<div class="cart-col-2">
+						<a href="">
+							<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+						</a>
+					</div>
+					<div class="fl">
+
+						<div class="clearfix">
+							<div class="cart-col-3">
+								<div class="cart-good-name">
+									<a href="">
+										戴尔液晶显示器什么乱七八糟的
+									</a> 
+								</div> 
+								<div class="cart-good-info"> 
+									<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+										<select name="" id="">
+											<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+											<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+											<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+											<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+										</select>
+									</div>  
+								</div>
+								<div class="cart-good-info2">
+									
+								</div>
+							</div>
+							<div class="cart-col-4">
+								 <s class="cart-good-price">
+								 	799.00
+								 </s>
+								 <div class="cart-good-real-price">
+								 	799.00
+								 </div>
+
+								<div class="cart-coupon cart-prom" gui-popup gui-popup-animate="1"> 
+									<div class="cart-coupon-trigger">
+										促销优惠
+										<i class="c-i cart-arrow arrowdown_red"></i>
+									</div>
+									<div class="cart-coupon-box" gui-popupbox> 
+										<div class="cart-box-arrow">
+											<i>◆</i><i class="cart-arrow-cover">◆</i>
+										</div>
+										<div class="cart-box-border" gui-popupbox-animate> 
+											<div class="cart-coupon-items border-none">
+												<dl class="clearfix">
+													<dt>
+														<input type="radio" name="cart-coupon">
+													</dt>
+													<dd>
+														活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+													</dd>
+												</dl>
+												<dl class="clearfix">
+													<dt>
+														<input type="radio" name="cart-coupon">
+													</dt>
+													<dd>
+														活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+													</dd>
+												</dl>
+												<div class="cart-coupon-btns cart-box-group-a">
+													<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+													<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+												</div>
+											</div> 
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="cart-col-5">
+								<div gui-count class="gui-count cart-count"> 
+									<input type="text" value="1"> 
+								</div> 
+							</div>
+							<div class="cart-col-6">
+								799.00
+							</div>							
+						</div>
+						
+
+						<div class="clearfix cart-warranty-item">
+							<div class="cart-col-3"> 
+								[延保] 延长保修1年
+							</div>
+							<div class="cart-col-4">
+								53.00
+							</div>
+							<div class="cart-col-5">
+								1
+							</div>
+							<div class="cart-col-6">
+								53.00
+							</div>
+						</div>
+					</div>
+
+					
+
+					<div class="cart-col-7">
+						<div class="cart-good-fun">
+							<a href="">删除</a> 
+						</div>
+						<div class="cart-good-fun">
+							<a href="">移入收藏夹</a>
+						</div>
+					</div>
+				</div>
+ 
+				
+				
+			</div>
+			<div class="cart-shop-good clearfix cart-item-last">
+				<div class="cart-item-line"></div>
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div> 
+			<div class="cart-shop-info">
+				<div class="cart-icon-notice">
+					满减
+					<b></b>
+					<i></i>
+				</div>
+				单笔订单满1000元立减50元，再购100元即可享受满减。
+				<a href="javascript:;">立即凑单</a>
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-item-line"></div>
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup gui-popup-animate="1"> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border" gui-popupbox-animate> 
+								<div class="cart-coupon-items border-none">
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt>
+											<input type="radio" name="cart-coupon">
+										</dt>
+										<dd>
+											活动商品满1000元减200元，赠优惠券优惠券等等其他优惠
+										</dd>
+									</dl>
+									<div class="cart-coupon-btns cart-box-group-a">
+										<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+										<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+			<div class="cart-shop-good clearfix cart-item-last">
+				<div class="cart-item-line"></div>
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-shop-header">
+			<div class="cart-col-1">
+				<div 
+					gui-checkbox 
+					gui-class-unchecked="checkboxs" 
+					gui-class-checked="checkbox_chose" 
+					gui-class-disabled="disabled"
+					class="c-i checkboxs">
+						<input type="checkbox">
+				</div>
+			</div>
+			<div class="cart-col-2">
+				国美自营
+			</div>
+			<div class="cart-col-3">
+				<div class="cart-coupon" gui-popup>
+					<a href="javascript:;" class="cart-coupon-trigger">
+						<i class="c-i add"></i>
+						优惠券
+						<i class="c-i cart-arrow arrowdown_red"></i>
+					</a> 
+					<div class="cart-coupon-box" gui-popupbox>
+						<div class="c-i closebtn" gui-popupclose></div>
+						<div class="cart-box-arrow">
+							<i>◆</i><i class="cart-arrow-cover">◆</i>
+						</div>
+						<div class="cart-box-border">
+							<div class="cart-coupon-notice">
+								<i class="c-i notice_red"></i>
+								领取成功的优惠券可在订单提交页使用
+							</div>
+							<div class="cart-coupon-items">
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div>
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div> 
+
+							</div> 
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="cart-col-4">
+				 &nbsp;
+			</div>
+			<div class="cart-col-5">
+				 &nbsp;
+			</div>
+			<div class="cart-col-6">
+				小计：￥0.00 
+			</div>
+			<div class="cart-col-7">
+				 &nbsp; 
+			</div>
+		</div>
+		<div class="cart-shop-goods">
+			<div class="cart-shop-info">
+				<div class="cart-icon-notice">
+					满返
+					<b></b>
+					<i></i>
+				</div>
+				<div gui-widget="select"class="gui-select gui-select-with-arrow">
+					<select name="" id="">
+						<option value="1">满300减少100的优惠什么的巴拉巴拉的</option>
+					</select>
+				</div> 
+				<!-- TODO -->
+				<div class="cart-zengpin cart-prom" gui-popup> 
+					<a class="cart-zengpin-trigger" href="javascript:">
+						查看赠品
+					</a>
+					<div class="cart-zengpin-box" gui-popupbox> 
+						<div class="cart-box-arrow">
+							<i>◆</i><i class="cart-arrow-cover">◆</i>
+						</div>
+						<div class="cart-box-border"> 
+							<div class="border-none">
+								<div class="c-i closebtn" gui-popupclose></div>
+								<div class="cart-zengpin-items">
+									<div class="cart-zengpin-item"> 
+										<a class="cart-zengpin-img" href="" target="_blank">
+											<img src="" alt="">
+										</a>
+										<div class="cart-zengpin-name">
+											<i>[折扣品]</i>
+											<a href="">
+												戴尔（DELL） E2215HV 21.5英寸宽屏LED TN液晶显示器英寸液晶显示器
+											</a>
+										</div>
+									</div>
+									<div class="cart-zengpin-item"> 
+										<a class="cart-zengpin-img" href="" target="_blank">
+											<img src="" alt="">
+										</a>
+										<div class="cart-zengpin-name">
+											<i>[折扣品]</i>
+											<a href="">
+												戴尔（DELL） E2215HV 21.5英寸宽屏LED TN液晶显示器英寸液晶显示器
+											</a>
+										</div>
+									</div>
+									<div class="cart-zengpin-item"> 
+										<a class="cart-zengpin-img" href="" target="_blank">
+											<img src="" alt="">
+										</a>
+										<div class="cart-zengpin-name">
+											<i>[折扣品]</i>
+											<a href="">
+												戴尔（DELL） E2215HV 21.5英寸宽屏LED TN液晶显示器英寸液晶显示器
+											</a>
+										</div>
+									</div>
+									<div class="cart-zengpin-item"> 
+										<a class="cart-zengpin-img" href="" target="_blank">
+											<img src="" alt="">
+										</a>
+										<div class="cart-zengpin-name">
+											<i>[折扣品]</i>
+											<a href="">
+												戴尔（DELL） E2215HV 21.5英寸宽屏LED TN液晶显示器英寸液晶显示器
+											</a>
+										</div>
+									</div>
+								</div> 
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cart-shop-info">
+				<div class="cart-icon-notice">
+					满返
+					<b></b>
+					<i></i>
+				</div>
+				<div gui-widget="select"class="gui-select gui-select-with-arrow">
+					<select name="" id="">
+						<option value="1">满300减少100的优惠什么的巴拉巴拉的</option>
+					</select>
+				</div> 
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info clearfix"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info clearfix">
+						[赠品]金士顿存储卡什么巴拉巴拉的
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info clearfix"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select> 
+						</div>  
+						<span class="icons c-i install" title="上门安装"></span>
+						<span class="icons c-i self" title="自提"></span>
+						<span class="icons c-i time" title="计时达"></span>
+						<span class="icons c-i time_limit" title="限时达"></span>
+						<span class="icons c-i pay" title="货到付款"></span>
+						<span class="icons c-i freight" title="免运费"></span>
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-shop-header">
+			<div class="cart-col-1">
+				<div 
+					gui-checkbox 
+					gui-class-unchecked="checkboxs" 
+					gui-class-checked="checkbox_chose" 
+					gui-class-disabled="disabled"
+					class="c-i checkboxs">
+						<input type="checkbox">
+				</div>
+			</div>
+			<div class="cart-col-2">
+				国美自营
+			</div>
+			<div class="cart-col-3">
+				<div class="cart-coupon" gui-popup>
+					<a href="javascript:;" class="cart-coupon-trigger">
+						<i class="c-i add"></i>
+						优惠券
+						<i class="c-i cart-arrow arrowdown_red"></i>
+					</a> 
+					<div class="cart-coupon-box" gui-popupbox>
+						<div class="c-i closebtn" gui-popupclose></div>
+						<div class="cart-box-arrow">
+							<i>◆</i><i class="cart-arrow-cover">◆</i>
+						</div>
+						<div class="cart-box-border">
+							<div class="cart-coupon-notice">
+								<i class="c-i notice_red"></i>
+								领取成功的优惠券可在订单提交页使用
+							</div>
+							<div class="cart-coupon-items">
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div>
+								<div class="cart-box-item clearfix">
+									<div class="cart-coupon-icon">
+										<div class="cart-coupon-icon-inner">
+											￥300
+										</div> 
+									</div>
+									<div class="cart-coupon-text">
+										<div class="cart-coupon-title">
+											满3000减100，全场通用
+										</div>
+										<div class="cart-coupon-dsp">
+											2015.01.05-2015.01.20
+										</div>
+									</div>
+									<a class="cart-coupon-btn">
+										领取
+									</a>
+								</div> 
+
+							</div> 
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="cart-col-4">
+				 &nbsp;
+			</div>
+			<div class="cart-col-5">
+				 &nbsp;
+			</div>
+			<div class="cart-col-6">
+				小计：￥0.00
+			</div>
+			<div class="cart-col-7">
+				 &nbsp;
+			</div>
+		</div>
+		<div class="cart-shop-goods">
+			<div class="cart-shop-info">
+				<div class="cart-icon-notice">
+					加价购
+					<b></b>
+					<i></i>
+				</div>
+				单笔订单满1000元立减50元，再购100元即可享受满减。 
+				<div class="cart-add-buy" gui-popup gui-popup-event="click" gui-popup-animate="1"> 
+					<a href="javascript:;" class="cart-add-buy-text">
+						立即换购
+					</a>  
+					<div class="cart-box-arrow" gui-popupbox>
+						<i>◆</i><i class="cart-arrow-cover">◆</i>
+					</div>
+				</div> 
+			
+
+				<div class="cart-add-buy-list" gui-popup-sibling> 
+					<div class="cart-add-buy-list-inner">
+						<div class="cart-add-buy-header">
+							可换购最多 
+							<span class="cart-red-text">2</span>
+							件，已选 
+							<span class="cart-red-text">1</span>
+							件
+						</div>
+						<div class="cart-add-buy-row clearfix">
+
+
+							<div class="cart-add-buy-item fl"> 
+								<div class="cart-add-buy-item-left">
+									<div 
+										gui-checkbox 
+										gui-class-unchecked="checkboxs" 
+										gui-class-checked="checkbox_chose" 
+										gui-class-disabled="disabled"
+										class="c-i checkboxs">
+											<input type="checkbox">
+									</div> 
+									<div class="cart-add-buy-tip">
+										<div class="c-i attention"></div>
+										最多可选择2件
+									</div>
+								</div> 
+								<div class="cart-add-buy-item-right">
+									<div class="cart-add-image fl">
+										<img 
+										src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg">
+									</div>
+									<div class="cart-add-detail">
+										<a href="">商品名字</a>
+										<div class="cart-add-buy-price">
+											￥99
+										</div> 
+									</div> 
+								</div>
+							</div>
+
+							<div class="cart-add-buy-item fl"> 
+								<a class="cart-add-buy-item-left">
+									<div 
+										gui-checkbox 
+										gui-class-unchecked="checkboxs" 
+										gui-class-checked="checkbox_chose" 
+										gui-class-disabled="disabled"
+										class="c-i checkboxs">
+											<input type="checkbox">
+									</div> 
+								</a> 
+								<div class="cart-add-buy-item-right">
+									<div class="cart-add-image fl">
+										<img 
+										src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg">
+									</div>
+									<div class="cart-add-detail">
+										<a href="">商品名字</a>
+										<div class="cart-add-buy-price">
+											￥99
+										</div> 
+									</div> 
+								</div>
+							</div>
+
+							<div class="cart-add-buy-item fl"> 
+								<a class="cart-add-buy-item-left">
+									<div 
+										gui-checkbox 
+										gui-class-unchecked="checkboxs" 
+										gui-class-checked="checkbox_chose" 
+										gui-class-disabled="disabled"
+										class="c-i checkboxs">
+											<input type="checkbox">
+									</div> 
+								</a> 
+								<div class="cart-add-buy-item-right">
+									<div class="cart-add-image fl">
+										<img 
+										src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg">
+									</div>
+									<div class="cart-add-detail">
+										<a href="">商品名字</a>
+										<div class="cart-add-buy-price">
+											￥99
+										</div> 
+									</div> 
+								</div>
+							</div>    
+						</div>
+
+						<div class="cart-add-buy-footer cart-box-group-a">
+							<a href="javascript:;" class="cart-btn cart-red-bg" gui-popupclose>确认</a>
+							<a href="javascript:;" class="cart-btn" gui-popupclose>取消</a>
+						</div>
+						
+
+
+					</div> 
+				</div> 
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info clearfix"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select>
+						</div>  
+					</div>
+					<div class="cart-good-info clearfix">
+						[赠品]金士顿存储卡什么巴拉巴拉的
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+			<div class="cart-shop-good clearfix">
+				<div class="cart-col-1"> 
+					<div 
+						gui-checkbox 
+						gui-class-unchecked="checkboxs" 
+						gui-class-checked="checkbox_chose" 
+						gui-class-disabled="disabled"
+						class="c-i checkboxs">
+							<input type="checkbox">
+					</div>
+				</div>
+				<div class="cart-col-2">
+					<a href="">
+						<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_80.jpg" alt="">
+					</a>
+				</div>
+				<div class="cart-col-3">
+					<div class="cart-good-name">
+						<a href="">
+							戴尔液晶显示器什么乱七八糟的
+						</a> 
+					</div> 
+					<div class="cart-good-info clearfix"> 
+						<div gui-widget="select"class="gui-select gui-select-with-arrow cart-guarantee">
+							<select name="" id="">
+								<option value="1" data-icon-class="c-i extend">购买延保服务</option>
+								<option value="2" data-icon-class="c-i extend">测试用的fsdafsadfsdaf2</option>
+								<option value="3" data-icon-class="c-i extend">测试用的测试用的fsdafsadfsdaf22d3</option>
+								<option value="4" data-icon-class="c-i noextend">暂不购买延保</option>
+							</select> 
+						</div>  
+						<span class="icons c-i install" title="上门安装"></span>
+						<span class="icons c-i self" title="自提"></span>
+						<span class="icons c-i time" title="计时达"></span>
+						<span class="icons c-i time_limit" title="限时达"></span>
+						<span class="icons c-i pay" title="货到付款"></span>
+						<span class="icons c-i freight" title="免运费"></span>
+					</div>
+					<div class="cart-good-info2">
+						
+					</div>
+				</div>
+				<div class="cart-col-4">
+					 <s class="cart-good-price">
+					 	799.00
+					 </s>
+					 <div class="cart-good-real-price">
+					 	799.00
+					 </div>
+
+					<div class="cart-coupon cart-prom" gui-popup> 
+						<div class="cart-coupon-trigger">
+							促销优惠
+							<i class="c-i cart-arrow arrowdown_red"></i>
+						</div>
+						<div class="cart-coupon-box" gui-popupbox> 
+							<div class="cart-box-arrow">
+								<i>◆</i><i class="cart-arrow-cover">◆</i>
+							</div>
+							<div class="cart-box-border"> 
+								<div class="cart-coupon-items border-none">
+									促销优惠信息
+
+								</div> 
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="cart-col-5">
+					<div gui-count class="gui-count cart-count"> 
+						<input type="text" value="1"> 
+					</div> 
+				</div>
+				<div class="cart-col-6">
+					799.00
+				</div>
+				<div class="cart-col-7">
+					<div class="cart-good-fun">
+						<a href="">删除</a> 
+					</div>
+					<div class="cart-good-fun">
+						<a href="">移入收藏夹</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cart-bottom-info cart-bottom-hwg" style="margin-top: 20px;">
+		<div class="cart-bottom-notice">
+			<div class="container">
+				海关规定：同一身份证当日购买多件海外购商品时，不得超过1000元人民币（不含关税），且不得超过3单。
+			</div>
+		</div>
+		<div class="container">
+			<div class="cart-col-1">
+				<div 
+					gui-checkbox 
+					gui-class-unchecked="checkboxs" 
+					gui-class-checked="checkbox_chose" 
+					gui-class-disabled="disabled"
+					class="c-i checkboxs">
+						<input type="checkbox">
+				</div>
+			</div>
+			<div class="cart-col-2">
+				全选
+			</div>
+			<div class="cart-col-3"> 
+				<a href="" class="black del-goods">
+					删除选中商品
+				</a> 
+			</div>
+			<div class="cart-col-4 cart-totle-price">
+				已选 
+				<span class="cart-price-red">
+					2
+				</span>
+				件商品
+				总共（不含运费）：
+				<span class="cart-price-red cart-price-big">￥0.00</span>
+				 
+				<br>
+				已节省：
+				-￥0.00
+				返券：5元 
+				优惠券X5 
+
+				<br>
+				关税：¥28（关税总额小于等于50免征）
+			</div> 
+			<div class="cart-col-5">
+				<a href="" class="flex-btn fl order-btn btn-status-loading">
+					<span class="btn-normal">海外购商品结算</span>
+					<div class="btn-loading">结算中<i></i></div>
+				</a>
+				<div class="flex-split fl"></div>
+				<a href="" class="flex-btn fl order-btn">普通商品结算</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container cart-deleted">
+		<div class="cart-deleted-header">
+			已删除商品，您可以重新购买或加关注：
+		</div> 
+		<div class="cart-deleted-content">
+			<div class="clearfix cart-deleted-item">
+				<div class="fl">
+					<a href="javascript:;">罗凡尼 X10 手机耳机金属耳机 入耳式线控音...</a> 
+				</div>
+				<div class="fr">
+					<a href="javascript:;">移入收藏夹</a> 
+				</div>
+				<div class="fr">
+					<a href="javascript:;">重新购买</a> 
+				</div>
+				<div class="fr"> 
+					1
+				</div>
+				<div class="fr"> 
+					799.00
+				</div> 
+			</div>
+
+			<div class="clearfix cart-deleted-item">
+				<div class="fl">
+					<a href="javascript:;">罗凡尼 X10 手机耳机金属耳机 入耳式线控音...</a> 
+				</div>
+				<div class="fr">
+					<a href="javascript:;">移入收藏夹</a> 
+				</div>
+				<div class="fr">
+					<a href="javascript:;">重新购买</a> 
+				</div>
+				<div class="fr"> 
+					1
+				</div>
+				<div class="fr"> 
+					799.00
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="container cart-bottom-tab">
+		<div class="cart-tab-header clearfix">
+			<a href="" class="active">我的收藏</a>
+			<a href="">最近浏览</a>
+			<a href="">为您推荐</a>
+		</div>
+		<div class="tab-content-wrap">
+			<div class="cart-tab-content">
+				<div gui-widget="scroll">
+					<a href=""></a>
+					<a href=""></a>
+					<div class="scroll-view clearfix">
+						<div class="cart-scroll-item fl">
+							<a class="cart-scroll-image" href="">
+								<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_100.jpg" alt="">
+								<div class="cart-scroll-tip">
+									加入成功
+								</div>
+							</a>
+							<div class="cart-scroll-title">
+								<a class="black" href="">九阳豆浆</a>
+							</div> 
+							<div class="cart-scroll-price">
+								￥399
+							</div> 
+							<a class="cart-scroll-btn" href="">加入购物车</a> 
+						</div>
+						<div class="cart-scroll-item fl">
+							<a class="cart-scroll-image" href="">
+								<img src="http://img.gomein.net.cn/image/bbcimg/production_image/nimg/20150830/21/8004390585/120443494_100.jpg" alt="">
+							</a>
+							<div class="cart-scroll-title">
+								<a href="">九阳豆浆</a>
+							</div> 
+							<div class="cart-scroll-price">
+								￥399
+							</div> 
+							<a class="cart-scroll-btn" href="">加入购物车</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+	
+	<br><br><br><br><br><br><br><br><br>
+	
+	<script src="/??gmlib/jq/1.7.1/jquery.min.js,gmlib/cookie/1.4.1/cookie.js,gmlib/ui/gcheckbox/1.0.0/gCheckbox.min.js,gmlib/ui/gpopup/1.0.0/gpopup.min.js,gmlib/ui/gcount/1.0.0/gcount.min.js,gmlib/ui/gselect/1.0.0/gselect.min.js"></script>
+	
+
+	<script type="text/javascript">
+	var dynSite='http://g.gome.com.cn',staSite='http://www.gome.com.cn',contextPath='/ec/homeus',imgServer='http://img.gomein.net.cn/images',secureURL='https://g.gome.com.cn:443',pictureserver='http://img.gomein.net.cn/image',cookieDomain='.gome.com.cn',stageJsServer='http://js.gomein.net.cn',stageImageServer='http://img.gomein.net.cn',stageCssServer='http://css.gomein.net.cn',cssserver='http://css.gomein.net.cn/css',jsserver='http://js.gomein.net.cn/js',versionData='20150040001500090023';
+	</script>
+
+	<script src="http://js.gomein.net.cn/js/g/ui/gCity.min.js"></script>
+
+	<script src="http://js.gomein.net.cn/js/n/firstPage/signtop.js"></script>
+	<script src="http://js.gomein.net.cn/gmlib/unit/live800/2.0.0/live800.js"></script>
+
+
+	<script>
+	$.gCheckbox.render();
+	$.gCount.render();
+	$.gSelect.render();
+
+	$.gCheckbox.bind(); 
+	$.gPopup.bind('click');
+
+	$.gPopup.bind('mouseover'); 
+
+	$.gSelect.bind();
+
+	
+
+	$(document).on('popshow selectshow', '.cart-shop-header,.cart-shop-good,.cart-shop-info', function () {
+		$(this).addClass('high-level');
+	}).on('pophide selecthide', '.cart-shop-header,.cart-shop-good,.cart-shop-info', function () {
+		$(this).removeClass('high-level');
+	});
+
+
+
+	$(document).on('gcheckbox.change', '.cart-shop-good', function (e, checked) {
+		var $this = $(this);
+		if(checked){
+			$this.addClass('cart-shop-good-checked');
+		}else{
+			$this.removeClass('cart-shop-good-checked');
+		}
+	})
+
+	$('#address').gCity({
+		gc_ads:'chtm',
+		gc_evt:function(){
+			//your code
+			
+			//重写城市cookie
+			//$.cookie('atgregion',this.xid+"|"+this.chtm+"|"+this.cid+"|"+this.sid+"|"+this.zid,{expires:30,path:'/',domain:cookieDomain});
+			//重写八叉乐cookie
+			//$.cookie('atgMboxCity',this.snam,{expires:30,path:'/',domain:cookieDomain});
+		}
+	});
+
+
+	// ie6下javascript协议的a标签会造成图片加载停止和ajax取消
+	if(navigator.userAgent.toLowerCase().indexOf('msie 6')>-1){
+		$(document).on('click', 'a', function(e){
+			var href = this.href;
+			if(href == 'javascript:;' || href == 'javascript:' || 
+				href == 'javascript:void(0)' || href == 'javascript:void(0);'){
+				e.preventDefault();
+			}
+		});
+	}
+	
+	</script>
+</body>
+</html>

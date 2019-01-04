@@ -1,0 +1,70 @@
+{% if config.debug %}
+
+<div id="gome-bar">
+    <div class="gome-aside">
+        <ul>
+            <li id="gome-aside-cart" class="lang">
+                <b></b><a href="javascript:void(0)" class="lang"><i class="caricon"></i><b class="car_num car_num_0"><s></s><span class="point"></span></b><span class="text">购物车</span></a>
+            </li>
+            <li id="gome-aside-coupon">
+                <b></b><a href="javascript:void(0)"><i></i></a>
+                <div><a>我的优惠券</a></div>
+            </li>
+            <li id="gome-aside-survey">
+                <b></b><a data-code="1000043132" href="http://www.gome.com.cn/ec/homeus/survey/surveyPage.jsp?key=gome001" target="_blank"><i></i></a>
+                <div><p><a data-code="1000043132" href="http://www.gome.com.cn/ec/homeus/survey/surveyPage.jsp?key=gome001" target="_blank">首页调研</a></p></div>
+            </li>
+            <li id="gome-aside-service">
+                <b></b><a class="live800-service"><i></i></a>
+                <div><p><a class="live800-service">在线客服</a></p></div>
+            </li>
+            <li id="gome-aside-backtop">
+                <b></b><a href="javascript:void(0)"><i></i></a>
+                <div><p><a>返回顶部</a></p></div>
+            </li>
+        </ul>
+    </div>
+    <!-- gome-aside -->
+    <div id="gome-bar-border">
+        <ul id="gome-bar-border-tab">
+            <li class="gome-bar-btn-member" data-open="member"><b></b><i class="membericon"></i></li>
+            <li class="gome-bar-btn-cart"  data-open="cart" id="gome-bar-btn-cart"><b class="car_arrow"></b><i class="caricon"></i><b class="car_num car_num_0"><s></s><span class="point"></span></b><span class="text">购物车</span></li>
+            <li class="gome-bar-btn-coupon" data-open="coupon"><b></b><i class="caricon"></i></li>
+        </ul>
+    </div>
+    <!-- gome-bar-border -->
+    <div id="gome-bar-box">
+        <div id="gome-bar-member" class="gome-bar-box-wrap">
+            <h3><span class="gome-bar-close"></span></h3>
+            <div id="member-body" class="gome-bar-box-body">
+                <div class="gome-bar-box-loading">
+                    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img.gomein.net.cn/gmlib/ui/loading/1.0.0/loading.gif">
+                </div>
+            </div>
+        </div>
+        <div id="gome-bar-cart" class="gome-bar-box-wrap">
+            <h3><span class="gome-bar-close"></span></h3>
+            <div id="cart-body" class="gome-bar-box-body">
+                <div class="gome-bar-box-loading">
+                    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img.gomein.net.cn/gmlib/ui/loading/1.0.0/loading.gif">
+                </div>
+            </div>
+        </div>
+        <div id="gome-bar-coupon" class="gome-bar-box-wrap">
+            <h3><span class="gome-bar-close"></span></h3>
+            <div id="coupon-body" class="gome-bar-box-body">
+                <div class="gome-bar-box-loading">
+                    <img src="http://img.gomein.net.cn/images/grey.gif" gome-src="http://img.gomein.net.cn/gmlib/ui/loading/1.0.0/loading.gif">
+                </div>
+            </div>
+        </div>
+        <!-- gome-bar-coupon -->
+    </div>
+    <!-- gome-bar-box -->
+</div>
+<!--aside-->
+<!--aside-->
+{% else %}
+<!--#include virtual="/n/common/a11/aside.html"-->
+{% endif %}
+

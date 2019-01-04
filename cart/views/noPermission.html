@@ -1,0 +1,80 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{{ mcart.normalHead(config,"企业购物车_国美")}}
+	<!--gfe:combo:begin-->
+	<link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+	<!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+    <link rel="stylesheet" href="gmlib/ui/gcount/1.0.0/gcount.css">
+    <link rel="stylesheet" href="gmlib/ui/gselect/1.0.0/gselect.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <!--gfe:combo:end-->
+</head>
+<body class="w990">
+	<!--#include virtual="/n/common/a11/head.html"-->
+	<div class="container">
+		<div class="cart-empty-wrap">
+			<div class="icons c-i panel-warn"></div>
+			<div class="cart-empty-text">
+				<h2>抱歉，您没有权限访问这个页面</h2>
+				<div style="margin-top:8px;">
+					<a href='//www{{config.cookieDomain}}' style="line-height:29px;">返回首页<span class="cartjt">&gt;</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--#include virtual="/n/common/a11/foot.html"-->
+	<!--#include virtual="/n/common/a11/aside.html"-->
+	<script>
+	var $page={
+        site:"{{ site }}"
+        ,name:"cart"
+    }
+	</script>
+	<!--#include virtual="/n/common/global/global.html"-->
+
+	<!--gfe:combo:begin-->
+	<script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+	<!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+    <!--gfe:combo:end-->
+
+	<!--gfe:combo:begin-->
+	<script src="gmlib/ui/gcheckbox/1.0.0/gCheckbox.js"></script>
+	<script src="gmlib/ui/gpopup/1.0.0/gpopup.js"></script>
+	<script src="gmlib/ui/gcount/1.0.0/gcount.js"></script>
+	<script src="gmlib/ui/gselect/1.0.0/gselect.js"></script>
+	<script src="gmlib/unit/g/1.0.0/g.min.js"></script>
+    <script src="/js/js/common/gscroll.js"></script>
+    <script src="/js/js/common/panel.js"></script>
+
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

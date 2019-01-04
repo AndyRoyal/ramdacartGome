@@ -1,0 +1,168 @@
+{% import "widget/cart.macro.html" as mcart %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    {{ mcart.normalHead(config,"身份认证信息_国美")}}
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" type="text/css" href="<!--#include virtual='/n/common/a11/style.html'-->" />
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <link rel="stylesheet" href="/css/i/sprite.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="gmlib/unit/gcity/1.0.0/gcity.css">
+    <link rel="stylesheet" href="/css/cart-ui.css">
+
+    <link rel="stylesheet" href="/css/buy-steps.css">
+    <link rel="stylesheet" href="/css/energy-allowance.css">
+    <!--gfe:combo:end-->
+
+</head>
+<body class="w990">
+    <!--#include virtual="/n/common/a11/head.html"-->
+    <div class="container">
+        <!-- 顶部logo，当前订单阶段 -->
+         <!-- <div class="nTop clearfix">
+            <h1 class="logo"><a href="http://www{{ config.cookieDomain }}/" title="国美在线" target="_blank"><img src="{{ config.imageServer }}/images/ui/gomelogo.png" /></a></h1>
+        </div> -->
+        <div id="products-gome">
+            <div class="nMyCartName"><b class="name fontYaHei">身份认证信息</b></div>
+            <div class="fieldset fd-curr">
+                <div class="fs-con">
+                    <div class="tips-attention l-r-borer">
+                        根据北京市商务委《京商务消促字[2015]13号》文件，在京人员通过国美网上购买节能补贴商品时，须实名上传证件照片并通过审核,收货时须本人收货并出示证件原件以供配送员审验。
+                    </div>
+                    <div class="fk-grid fk-g-2 l-r-borer">
+                        <div class="n-cols">
+                            <div class="fk-h"><i class="nStar nRed"> * </i>个人姓名：</div>
+                            <div class="fk-d"><label for=""><input type="text" name="userName" id="userName" class="txt-17 mr10"><span id="userNameError" style="color: red"></span></label></div>
+                            <div class="fk-h"><i class="nStar nRed"> * </i>证件类型：</div>
+                            <div class="fk-d">
+                                <label for="certType_1"><input type="radio" name="certType" class="mr5" id="certType_1" value="1" checked="checked" style="position: relative; top: 2px;"><span class="mr10">京籍身份证</span></label>
+                                <label for="certType_2"><input type="radio" name="certType" class="mr5" id="certType_2" value="2" style="position: relative; top: 2px;"><span class="mr10">驻京军人证</span></label>
+                                <label for="certType_3"><input type="radio" name="certType" class="mr5" id="certType_3" value="3" style="position: relative; top: 2px;"><span class="mr10">北京居住证</span></label>
+                                <label for="certType_4"><input type="radio" name="certType" class="mr5" id="certType_4" value="4" style="position: relative; top: 2px;"><span class="mr10">北京暂住证</span></label>
+                            </div>
+                            <div class="fk-h"><i class="nStar nRed"> * </i>身份证号：</div>
+                            <div class="fk-d"><label for=""><input type="text" name="certNumber" id="certNumber" class="txt-25 mr10"><span id="certNumberError" style="color: red"></span></label></div>
+                            <div class="fk-h" id="cardNumber_name" style="display:none"><i class="nStar nRed"> * </i>证件编号：</div>
+                            <div class="fk-d" id="cardNumber_num" style="display:none"><label for=""><input type="text" name="cardNumber" id="cardNumber" class="txt-25 mr10"><span id="cardNumberError" style="color: red"></span></label></div>
+                            <div class="fk-h"><i class="nStar nRed"> * </i>证件照片：</div>
+                            <div class="fk-d">
+                                <div class="rn-cols">
+                                    <div class="rn-c">
+                                        <div class="rn-pc">
+                                            <!--pc上传-->
+                                            <div class="tips">您提供的身份信息国美将予以加密保护，保证此证件照片仅用于办理本次节能补贴业务。<br>文件尺寸最大不超过5M，照片支持jpg/jpeg/bmp/png格式。</div>
+                                            <div class="upload-cols clearfix">
+                                                <div class="u-c-item">
+                                                    <div class="upload-au">
+                                                        <a id="up_1" href="javascript:;" class="upload_btn">
+                                                            <img width="198" height="120" src="/css/i/rm_card01.png" alt="">
+                                                            <input clstag="pageclick|keycount|phone_201501302|8" id="file_1" capture="camera" accept="image/*" name="file_1" type="file" class="file">
+                                                            <div class="upload-load"><div class="upload-loading"></div></div>
+                                                        </a>
+                                                        <span id="img_1" class="upload-pic" style="display:none">
+                                                            <img width="198" height="120" name="pic1" src="" alt="">
+                                                        </span>
+                                                        <div class="modify-con">
+                                                            <a id="mobidfy_1" clstag="pageclick|keycount|phone_201501302|13" style="display:none" href="#" class="upload_edit btn">修改</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="example-au">
+                                                        <span class="ex-name">示例</span>
+                                                        <div class="ex-c">
+                                                            <img src="/css/i/pic-01.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="clr"></div>
+                                                </div>
+                                                <div class="u-c-item">
+                                                    <div class="upload-au">
+                                                        <a id="up_2" href="javascript:;" class="upload_btn">
+                                                            <img width="198" height="120" src="/css/i/rm_card02.png" alt="">
+                                                            <input clstag="pageclick|keycount|phone_201501302|8" id="file_2" capture="camera" accept="image/*" name="file_2" type="file" class="file">
+                                                            <div class="upload-load"><div class="upload-loading"></div></div>
+                                                        </a>
+                                                        <span id="img_2" class="upload-pic" style="display:none">
+                                                            <img width="198" height="120" name="pic2" src="" alt="">
+                                                        </span>
+                                                        <div class="modify-con">
+                                                            <a id="mobidfy_2" clstag="pageclick|keycount|phone_201501302|13" style="display:none" href="#" class="upload_edit btn">修改</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="example-au">
+                                                        <span class="ex-name">示例</span>
+                                                        <div class="ex-c">
+                                                            <img src="/css/i/pic-02.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="clr"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg-attention dis-b">
+                        <h4>购买须知：</h4>
+                        <p>
+                            根据北京市商务委关于节能减排商品的补贴政策，符合条件的用户在国美购买“参加节能补贴”的商品时，可以享受政策规定标准的资金补贴。为便于您在本平台顺利购买节能补贴商品，请详细阅读如下说明。
+                        </p>
+                        <p>
+                            1. 北京市商务委规定，补贴对象仅限于北京市户籍人员、驻京部队现役军人和现役武警、持有有效《北京市工作居住证》及《北京市暂住证》的非北京市户籍人员。根据市商务委要求，用户在下单购买节能补贴商品时需要准确填写个人真实信息。包括姓名、身份证号、符合补贴条件的有效证件编号（驻京军人证/北京居住证/北京暂住证），并上传清晰的身份证正反面照片及其他有效证件照片。用户的身份信息国美将予以加密保护，仅用于办理当次节能补贴业务。
+                        </p>
+                        <p>2. 补贴产品包括符合国家质量标准的电视机、电冰箱、洗衣机、空调、热水器、吸油烟机、空气净化器、坐便器和自行车等9类产品，每类产品仍需符合相应的能效及国家标准，具体产品是否参加请以页面公示为准。所有品类补贴限额为800元。</p>
+                        <p>
+                            3.  成功下单后，平台将对购买节能补贴商品的用户进行身份信息的审核校验。审核时间需要1-2天，审核通过后平台将尽快安排商品配送。审核不通过的，订单将会被取消。审核不通过原因包括但不限于：身份信息不存在或不准确、上传照片不清晰、填写信息与证件照片不符、已在本平台或其他渠道享受过同品类的商品补贴等。
+                        </p>
+                        <p>4. 商品配送地区仅限北京地区。订单必须用户本人签收，并提供本人身份证件原件接受配送员审验通过后，用户在节能补贴确认书上签字确认，确认书一式三份，用户留存一份。</p>
+                        <p>5. 节能补贴只适用于个人用户，企业用户不能享受。发票类型只能开具个人普通纸质发票。</p>
+                        <p>6.  在政策实施期内，符合购买条件的用户每类产品全渠道只能有1台（个）享受补贴政策。如果您已在本平台或其他渠道购买过节能补贴商品，再次购买同类商品将无法享受节能补贴。</p>
+                        <p>7. 已享受补贴的订单如发生退货，退款金额只包含用户实付金额，不包含补贴金额。退货完成后，需平台在政府节能减排信息系统登记退货记录后，用户才可再次下单购买同品类商品。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bar">
+        <p class=" txt-r">
+            <a href="javascript:void(0)" class="btn-m-r disable" id="gotosubmit"><span>去结算</span></a>
+        </p>
+    </div>
+    <!--#include virtual="/n/common/a11/foot.html"-->
+    <!--#include virtual="/n/common/a11/aside.html"-->
+    <script type="text/javascript">
+    var $page = {
+        site:'{{ site }}',
+        name:'allowance'
+    };
+    </script>
+    <!--#include virtual="/n/common/global/global.html"-->
+    <!--gfe:combo:begin-->
+    <script src="<!--#include virtual='/n/common/a11/script.html'-->"></script>
+    <!--gfe:combo:end-->
+
+    <!--gfe:combo:begin-->
+    <script src="gmlib/ui/gmodal/1.0.0/gModal.js"></script>
+    <script src="gmlib/ui/gdialog/1.0.0/gDialog.js"></script>
+    <script src="/js/js/common/kit/request/request.js"></script>
+    <script src="/js/js/common/kit/asyncLoadCSSJS.js"></script>
+    <script src="/js/js/common/$config.js"></script>
+    <script src="/js/js/common/kit/util.js"></script>
+    <script src="/js/js/common/cart-ui.js"></script>
+
+    <script src="/js/js/n/orderErrorMsg.js"></script>
+    <script src="/js/js/allowance/ajaxupload.js"></script>
+    <script src="/js/js/allowance/renzheng.js"></script>
+
+    <script src="/js/js/common/others.js"></script>
+    <!--gfe:combo:end-->
+
+    <script type="text/javascript" inbottom>
+      util_watch.emit($page.name,"renderEnd",null);
+    </script>
+</body>
+</html>
